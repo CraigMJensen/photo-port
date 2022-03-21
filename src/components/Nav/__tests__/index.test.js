@@ -2,6 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Nav from '..';
+/* eslint-disable */
 
 afterEach(cleanup);
 
@@ -30,5 +31,5 @@ describe('links are visible', () => {
     const { getByTestId } = render(<Nav />);
     expect(getByTestId('link')).toHaveTextContent('Oh Snap!');
     expect(getByTestId('about')).toHaveTextContent('About me');
-  })
-})
+  });
+});
